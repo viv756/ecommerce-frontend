@@ -1,3 +1,5 @@
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -34,7 +36,7 @@ $color3: rgb(0, 104, 136);
 }
 
 @import "admin-styles/mixin";
-@import "_home";
+@import "home";
 @import "admin-styles/dashboard";
 @import "admin-styles/products";
 @import "admin-styles/chart";
