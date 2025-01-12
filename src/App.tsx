@@ -21,6 +21,7 @@ const TransactionManagement = lazy(() => import("./pages/admin/management/transa
 const Home = lazy(() => import("./pages/HomePage"));
 const Search = lazy(() => import("./pages/SearchPage"));
 const Cart = lazy(() => import("./pages/CartPage"));
+const Shipping = lazy(() => import("./pages/Shippingpage"));
 
 const App = () => {
   return (
@@ -29,9 +30,15 @@ const App = () => {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route/>
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />
 
+          {/* {Logged in admin Routes} */}
+          <Route>
+            <Route path="/shipping" element={<Shipping />} />
+          </Route>
+          
           {/* Admin Routes */}
           <Route
           // element={
