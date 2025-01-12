@@ -22,6 +22,7 @@ const Home = lazy(() => import("./pages/HomePage"));
 const Search = lazy(() => import("./pages/SearchPage"));
 const Cart = lazy(() => import("./pages/CartPage"));
 const Shipping = lazy(() => import("./pages/Shippingpage"));
+const Login = lazy(() => import("./pages/LoginPage"));
 
 const App = () => {
   return (
@@ -30,15 +31,17 @@ const App = () => {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route/>
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />
+
+          {/* Not Login */}
+          <Route path="/login" element={<Login />} />
 
           {/* {Logged in admin Routes} */}
           <Route>
             <Route path="/shipping" element={<Shipping />} />
           </Route>
-          
+
           {/* Admin Routes */}
           <Route
           // element={
